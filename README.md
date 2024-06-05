@@ -1,2 +1,0 @@
-# BackEndWebBank
-CRUD USER FOR WEB BANK PROJECT
