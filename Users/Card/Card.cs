@@ -11,6 +11,11 @@ namespace BackendSharp.Users
         public User User { get; private set; }
 
 
+        public Card()
+    {
+        NumberCard = string.Empty;
+    }
+
         public Card(string numberCard, string cvc, string validity, string passwordcard,Guid userId)
         {
             Id = Guid.NewGuid();
