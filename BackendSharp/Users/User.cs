@@ -1,7 +1,6 @@
 namespace BackendSharp.Users;
 
 
-
 public class User {
     public Guid Id { get; init; }
     public string Cpf { get; private set; }
@@ -11,6 +10,8 @@ public class User {
     public string Password { get; private set; } 
 
     public bool Activated { get; private set; }
+
+    public ICollection<Card> Cards { get; private set; } = new List<Card>();
 
     public User( string cpf, string name, string phone, string email, string password ) {
 

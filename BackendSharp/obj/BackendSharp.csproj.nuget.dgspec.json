@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj": {}
+    "C:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj": {
+    "C:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj",
         "projectName": "BackendSharp",
-        "projectPath": "c:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj",
+        "projectPath": "C:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"

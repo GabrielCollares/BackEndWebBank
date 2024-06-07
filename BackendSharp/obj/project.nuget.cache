@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WG/Dc7GDITCG/oB7mDczItdWYg5XBHUk1Uwy1mQ+auH2TewmBivVi2nsgfKVVW3IwPc/JMQpI0NAyS9icL/bHA==",
+  "dgSpecHash": "Y11jW9dDpnYp/ljBWHhPnM50kkYIpvSUYgAG/RUB7vQEvTqWHAEC9MY6uWAJz/47qVyuJTh0Ps8CuFKdRxcR3g==",
   "success": true,
-  "projectFilePath": "c:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\Desktop\\backendPF\\BackendSharp\\BackendSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.4\\microsoft.aspnetcore.openapi.8.0.4.nupkg.sha512",
