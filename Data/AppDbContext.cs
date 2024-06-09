@@ -1,17 +1,19 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace BackendSharp.Users;
 
 
-public class AppDbContext: DbContext
+public class AppDbContext(IConfiguration config) : DbContext
 {
-public DbSet<User> Users { get; set; }
-   
+    public IConfiguration Configuration { get; } = config;
+
+    public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.LogTo(Console.WriteLine);
-        optionsBuilder.UseSqlite("Data Source=Banco.sqlite");
+        optionsBuilder.UseSqlite(Configuration.GetConnectionString("Default"));
         base.OnConfiguring(optionsBuilder);
     }
 }
