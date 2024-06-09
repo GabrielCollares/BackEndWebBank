@@ -20,6 +20,17 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 UsersRotas.AddRotasUsers(app);
+// apply any pending migration before run app
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<AppDbContext>();
+    if (context.Database.GetPendingMigrations().Any())
+    {
+        context.Database.Migrate();
+    }
+}
 
 app.Run();
 
