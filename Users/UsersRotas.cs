@@ -11,7 +11,7 @@ public static class UsersRotas {
     {
     var rotasUsers = app.MapGroup("users");
 // POST METOD
-    rotasUsers.MapPost(pattern: "", handler: async (AddUserRquest request, AppDbContext context, CancellationToken ct ) => {
+    rotasUsers.MapPost(pattern: "register", handler: async (AddUserRquest request, AppDbContext context, CancellationToken ct ) => {
 
         var existingCpf = await context.Users.AnyAsync(user => user.Cpf == request.Cpf, ct);
         var existingEmail = await context.Users.AnyAsync(user => user.Email == request.Email, ct);
