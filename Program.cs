@@ -13,12 +13,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "MyCorsPolicy",
+    options.AddPolicy(name: "AllowAllPolicy",
                       builder =>
                       {
-                          builder.WithOrigins("https://effective-space-orbit-7jrqpvxwrjphpxq5-5173.app.github.dev", "http://localhost:5173")
-                                 .AllowAnyMethod() // Permite todos os métodos, ou especifique os desejados
-                                 .AllowAnyHeader(); // Permite todos os cabeçalhos, ou especifique os desejados
+                          builder.AllowAnyOrigin()
+                                 .AllowAnyMethod()
+                                 .AllowAnyHeader();
                       });
 });
 
@@ -29,7 +29,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseCors("MyCorsPolicy");
+    app.UseCors("AllowAllPolicy");
 }
 
 app.UseHttpsRedirection();
