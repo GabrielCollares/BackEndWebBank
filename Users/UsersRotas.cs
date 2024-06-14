@@ -20,7 +20,7 @@ public static class UsersRotas {
         var newUser =  new User(request.Cpf,request.Name,request.Phone,request.Email,request.Password);
         var user = await context.Users.AddAsync(newUser);
         await context.SaveChangesAsync(ct);
-        var UserReturn = new UserDto(newUser.Id, newUser.Cpf, newUser.Name, newUser.Phone, newUser.Email, newUser.Password);
+        var UserReturn = new UserDto(newUser.Id, newUser.Cpf, newUser.Name, newUser.Phone, newUser.Email);
         return Results.Ok(UserReturn);
     });
             
@@ -30,7 +30,7 @@ public static class UsersRotas {
         var users = await context
         .Users
         .Where(user => user.Activated)
-        .Select(user => new UserDto(user.Id, user.Cpf, user.Name, user.Phone, user.Email, user.Password))
+        .Select(user => new UserDto(user.Id, user.Cpf, user.Name, user.Phone, user.Email))
         .ToListAsync(ct);
         return users;   
         });
@@ -43,7 +43,7 @@ public static class UsersRotas {
 
              user.AtualizarUsers (request.Cpf, request.Name, request.Phone,request.Email, request.Password);
             await context.SaveChangesAsync(ct);
-            return Results.Ok(new UserDto(user.Id, user.Cpf, user.Name, user.Phone,user.Email, user.Password));
+            return Results.Ok(new UserDto(user.Id, user.Cpf, user.Name, user.Phone,user.Email));
         });
 
 
